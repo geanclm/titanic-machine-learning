@@ -1,14 +1,15 @@
+# by geanclm on 14/01/2024
+# status: em desenvolvimento paralelo ao Machine Learning do Jupyter Notebook
+
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="análise de de sobreviventes do Titanic...")
+st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 
 with st.container():
-    st.subheader("Meu primeiro Machine Learning com o Streamlit")
-    st.title("Dashboard de Contratos")
-    st.write("Informações sobre os contratos fechados pela Hash&Co ao longo de maio")
+    st.subheader("Predição de sobrevivemtes do naufráfio do Titanic")
+    st.title("MNachine Learning com Python")    
     st.write("Para saber mais sobre o evento do naufrágio [Clique aqui](https://pt.wikipedia.org/wiki/RMS_Titanic)")
-
 
 @st.cache_data
 def carregar_dados():
@@ -22,4 +23,3 @@ with st.container():
     dados = carregar_dados()
     dados = dados[-num_dias:]
     st.area_chart(dados, x="Data", y="Contratos")
-
