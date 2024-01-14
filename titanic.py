@@ -7,10 +7,10 @@ import pandas as pd
 
 st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 with st.container():
-    st.subheader("Projeto de Machine Learning: Previsão de Sobrevivência no Titanic")
+    st.subheader("Projeto: Previsão de Sobreviventes no Titanic")
     st.title("Machine Learning com Python")    
     # st.write("Para saber mais sobre o evento do naufrágio [Clique aqui] (https://pt.wikipedia.org/wiki/RMS_Titanic)")
-    st.write("Nesse momento a boa notícia é a de que todos os passageiros com menos de 1 ano de idade sobreviveram")
+    st.write("Todos os passageiros com menos de 1 ano de idade sobreviveram")
 
 # @st.cache_data
 # def carregar_dados():
@@ -25,8 +25,8 @@ with st.container():
 #     dados = dados[-num_dias:]
 #     st.area_chart(dados, x="Data", y="Contratos")
 
-# Carregue o dataframe
+# dataframe treino
 df_train = pd.read_csv('train.csv')
 
-# comando df_train.tail() para mostrar as últimas linhas do dataframe no streamlit
-st.write(df_train[df_train['Age']<1])
+# st.write(df_train[df_train['Age']<1])
+st.dataframe(df_train[df_train['Age'] < 1])
