@@ -8,6 +8,11 @@ import pandas as pd
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
     # st.subheader("Previsão de Sobreviventes no Titanic")
+
+image_url = "rms-titanic-bill-cannon.jpg"  # ou caminho local se a imagem estiver no mesmo diretório
+st.image(image_url, caption='RMS Titanic.jpg', use_column_width=True)
+
+
 st.title("Titanic - Machine Learning")    
     # st.write("Para saber mais sobre o evento do naufrágio [Clique aqui] (https://pt.wikipedia.org/wiki/RMS_Titanic)")
 st.write("Predição de sobreviventes")
