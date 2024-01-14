@@ -9,11 +9,11 @@ import pandas as pd
 # with st.container():
     # st.subheader("Previsão de Sobreviventes no Titanic")
 
+st.title("Titanic - Machine Learning")
+
 image_url = "rms-titanic-bill-cannon.jpg"  # ou caminho local se a imagem estiver no mesmo diretório
 st.image(image_url, caption='RMS Titanic.jpg', use_column_width=True)
 
-
-st.title("Titanic - Machine Learning")    
     # st.write("Para saber mais sobre o evento do naufrágio [Clique aqui] (https://pt.wikipedia.org/wiki/RMS_Titanic)")
 st.write("Predição de sobreviventes")
 st.write("Os passageiros, da base treino, com menos de 1 ano de idade sobreviveram!")
