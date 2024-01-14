@@ -5,12 +5,13 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Predição de sobreviventes do Titanic")
+# st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 with st.container():
-    st.subheader("Projeto: Previsão de Sobreviventes no Titanic")
-    st.title("Machine Learning com Python")    
+    st.subheader("Previsão de Sobreviventes no Titanic")
+    st.title("Titanic - Machine Learning")    
     # st.write("Para saber mais sobre o evento do naufrágio [Clique aqui] (https://pt.wikipedia.org/wiki/RMS_Titanic)")
-    st.write("Todos os passageiros com menos de 1 ano de idade sobreviveram")
+    st.write("Predição de sobreviventes")
+    st.write("Os passageiros, da base treino, com menos de 1 ano de idade sobreviveram")
 
 # @st.cache_data
 # def carregar_dados():
