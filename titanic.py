@@ -6,11 +6,11 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(page_title="Predição de sobreviventes do Titanic")
-
 with st.container():
-    st.subheader("Predição de sobreviventes do naufráfio do Titanic")
+    st.subheader("Projeto de Machine Learning: Previsão de Sobrevivência no Titanic")
     st.title("Machine Learning com Python")    
-    st.write("Para saber mais sobre o evento do naufrágio [Clique aqui] (https://pt.wikipedia.org/wiki/RMS_Titanic)")
+    # st.write("Para saber mais sobre o evento do naufrágio [Clique aqui] (https://pt.wikipedia.org/wiki/RMS_Titanic)")
+    st.write("Nesse momento a boa notícia é a de que todos os passageiros com menos de 1 ano de idade sobreviveram")
 
 # @st.cache_data
 # def carregar_dados():
@@ -29,4 +29,4 @@ with st.container():
 df_train = pd.read_csv('train.csv')
 
 # comando df_train.tail() para mostrar as últimas linhas do dataframe no streamlit
-st.write(df_train.tail())
+st.write(df_train[df_train['Age']<1])
