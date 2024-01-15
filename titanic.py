@@ -5,6 +5,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import joblib
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
@@ -74,3 +75,6 @@ st.text(
     "Com esse perfil, seguno o modelo de Machine Learnming, de acurácia 87,68%,\n"
      "o passageiro SOBREVIVERIA ao naufrágio do Titanic"
      )
+
+with open('CLASSIFICAÇÃO_Titanic_Kaggle_csv_2-2024-01-11_rfc_08768656716417911.csv.joblib', 'rb') as m:
+    model = joblib.load(m)
