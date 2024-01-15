@@ -3,6 +3,7 @@
 # status: em desenvolvimento paralelo ao Machine Learning do Jupyter Notebook
 
 import streamlit as st
+import matplotlib.pyplot as plt
 import pandas as pd
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
@@ -25,10 +26,18 @@ df_train = pd.read_csv('train.csv')
 st.dataframe(df_train[df_train['Age'] < 1])
 
 st.text(
-    "Quando é necessário saber algo que poderia acontecer, com base no padrão dos dados conhecidos,\n"
-    "utilizamos o Machine Learning, que é exatamente prever quem sobreviveu, e melhor ainda;\n"
-    "quem sobreviveria considerando um novo perfil de passageiro"
+    "Quando é necessário saber algo que poderia acontecer, com base no padrão dos dados\n
+    "conhecidos, utilizamos o Machine Learning, que é exatamente prever quem sobreviveu,\n
+    "e melhor ainda quem sobreviveria considerando um novo perfil de passageiro"
     )
+
+# Criar histograma
+fig, ax = plt.subplots(figsize=(15, 8))
+df_train.hist(ax=ax)
+plt.tight_layout()
+
+# Exibir no Streamlit
+st.pyplot(fig)
 
 st.text(
     "No histograma (hist), por exemplo, podemos verificar a contagem de cada situação presente na base de dados.\n"
@@ -44,5 +53,6 @@ st.text(
 
 st.text(
     "Uma pessoa com outro perfil sobreviveria ao naufrágio do Titanic?\n"
-    "Neste modelo de Machine Learning, com acurácia de 87,6% de acerto é possível simular!"
+    "Neste modelo de Machine Learning, com acurácia de 87,6% de acerto\n
+    "é possível simular!"
     )
