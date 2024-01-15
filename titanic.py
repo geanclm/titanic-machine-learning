@@ -31,13 +31,13 @@ st.text(
     "e melhor ainda quem sobreviveria considerando um novo perfil de passageiro"
     )
 
-# Criar histograma
-fig, ax = plt.subplots(figsize=(15, 8))
-df_train.hist(ax=ax)
-plt.tight_layout()
+# # Criar histograma
+# fig, ax = plt.subplots(figsize=(15, 8))
+# df_train.hist(ax=ax)
+# plt.tight_layout()
 
-# Exibir no Streamlit
-st.pyplot(fig)
+# # Exibir no Streamlit
+# st.pyplot(fig)
 
 st.text(
     "No histograma (hist), por exemplo, podemos verificar a contagem de cada situação presente na base de dados.\n"
