@@ -15,7 +15,7 @@ import pandas as pd
 st.title("Titanic - Machine Learning")
 
 image_url = "310553_filme_Titanic_1997.JPG"
-st.image(image_url, caption='RMS Titanic (abril de 1912)', use_column_width=True)
+st.image(image_url, caption='Cena do filme Titanic (1997) dirigido por James Cameron', use_column_width=True)
 
 st.write("Os passageiros, com menos de 1 ano de idade, SOBREVIVERAM!")
 st.text(
