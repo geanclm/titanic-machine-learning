@@ -1,11 +1,14 @@
 # by geanclm on 14/01/2024
 # with ChatGPT support for advanced subjects
 # status: em desenvolvimento paralelo ao Machine Learning do Jupyter Notebook
+# - - -
+# pip install -r requirements.txt
 
 import streamlit as st
 import pandas as pd
 import numpy as np
-from joblib import load
+# import joblib
+# from joblib import load
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
@@ -72,13 +75,10 @@ st.text(
     "de 35 dólares, sobreviveria ao naufrágio do Titanic?"
     )
 st.text(
-    "Com esse perfil, seguno o modelo de Machine Learnming, de acurácia 87,68%,\n"
+    "Com esse perfil, segundo o modelo de Machine Learnming, de acurácia 87,68%,\n"
      "o passageiro SOBREVIVERIA ao naufrágio do Titanic"
      )
 
-st.title("Aplicando em dados novos")
-passageiro = st.text_input('Nome do passageiro(a): ')
-st.write('Aplicar modelo de Machine Learning para:', passageiro)
-
-with open('CLASSIFICAÇÃO_Titanic_Kaggle_csv_2-2024-01-11_rfc_08768656716417911.csv.joblib', 'rb') as m:
-    model = joblib.load(m)
+# st.title("Aplicando em dados novos")
+# passageiro = st.text_input('Nome do passageiro(a): ')
+# st.write('Aplicar modelo de Machine Learning para:', passageiro)
