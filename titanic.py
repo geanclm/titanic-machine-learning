@@ -3,7 +3,6 @@
 # status: em desenvolvimento paralelo ao Machine Learning do Jupyter Notebook
 
 import streamlit as st
-import matplotlib.pyplot as plt
 import pandas as pd
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
