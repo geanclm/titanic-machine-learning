@@ -5,7 +5,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-# import joblib
+from joblib import load
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
@@ -76,10 +76,9 @@ st.text(
      "o passageiro SOBREVIVERIA ao naufrágio do Titanic"
      )
 
-
-
-# with open('CLASSIFICAÇÃO_Titanic_Kaggle_csv_2-2024-01-11_rfc_08768656716417911.csv.joblib', 'rb') as m:
-#     model = joblib.load(m)
 st.title("Aplicando em dados novos")
 passageiro = st.text_input('Nome do passageiro(a): ')
 st.write('Aplicar modelo de Machine Learning para:', passageiro)
+
+with open('CLASSIFICAÇÃO_Titanic_Kaggle_csv_2-2024-01-11_rfc_08768656716417911.csv.joblib', 'rb') as m:
+    model = joblib.load(m)
