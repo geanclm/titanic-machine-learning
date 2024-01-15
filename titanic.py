@@ -6,9 +6,7 @@
 
 import streamlit as st
 import pandas as pd
-import numpy as np
 # import joblib
-# from joblib import load
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
@@ -16,7 +14,7 @@ import numpy as np
 
 st.title("Titanic - Machine Learning")
 
-image_url = "rms-titanic-bill-cannon.jpg"
+image_url = "310553_filme_Titanic_1997.JPG"
 st.image(image_url, caption='RMS Titanic (abril de 1912)', use_column_width=True)
 
 st.write("Os passageiros, com menos de 1 ano de idade, SOBREVIVERAM!")
@@ -79,6 +77,23 @@ st.text(
      "o passageiro SOBREVIVERIA ao naufrágio do Titanic"
      )
 
+
+# VERIFICAR ESSA PARTE EM OUTRO MOMENTO
 # st.title("Aplicando em dados novos")
+# modelo = joblib.load(modelo.joblib)
 # passageiro = st.text_input('Nome do passageiro(a): ')
-# st.write('Aplicar modelo de Machine Learning para:', passageiro)
+# col1, col2 = st.columns(2)
+# Age = col1.number_input(label="classe")
+# Fare = col2.number_input(label="idade")
+# Sex_bin = col1.number_input(label="digite a idade do passageiro:")
+# Cabin_bin = col2.number_input(label="digite a idade do passageiro:")
+# Embarked_Q = col1.number_input(label="digite a idade do passageiro:")
+# Embarked_S = col2.number_input(label="digite a idade do passageiro:")
+# Title_Miss = col1.number_input(label="digite a idade do passageiro:")
+# Title_Mr = col2.number_input(label="digite a idade do passageiro:")
+# Title_Mrs = col1.number_input(label="digite a idade do passageiro:")
+# Title_Person = col2.number_input(label="digite a idade do passageiro:")
+# Pclass_2 = col1.number_input(label="digite a idade do passageiro:")
+# Pclass_3 = col2.number_input(label="digite a idade do passageiro:")
+# familySize_c_Pequena = col1.number_input(label="digite a idade do passageiro:")
+# familySize_c_Sozinho = col2.number_input(label="digite a idade do passageiro:")
