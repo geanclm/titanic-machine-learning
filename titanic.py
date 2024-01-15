@@ -2,6 +2,8 @@
 # with ChatGPT support for advanced subjects
 # status: em desenvolvimento paralelo ao Machine Learning do Jupyter Notebook
 
+pip install joblib
+
 import streamlit as st
 import pandas as pd
 import numpy as np
