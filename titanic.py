@@ -12,27 +12,37 @@ import pandas as pd
 st.title("Titanic - Machine Learning")
 
 image_url = "rms-titanic-bill-cannon.jpg"  # ou caminho local se a imagem estiver no mesmo diretório
-st.image(image_url, caption='RMS Titanic.jpg', use_column_width=True)
+st.image(image_url, caption='RMS Titanic', use_column_width=True)
 
-    # st.write("Para saber mais sobre o evento do naufrágio [Clique aqui] (https://pt.wikipedia.org/wiki/RMS_Titanic)")
-st.write("Predição de sobreviventes")
-st.write("Os passageiros, da base treino, com menos de 1 ano de idade sobreviveram!")
+st.write("Os passageiros, com menos de 1 ano de idade, SOBREVIVERAM!")
+st.write("Essa prática, navegar na tabel de dados, faz parte da análise exploratório dos dados")
+st.write("Apresentar esse data framne, em fornmato gráfico, faz parte da Análise Explanatória dos Dados (AED)")
 
-# @st.cache_data
-# def carregar_dados():
-#     tabela = pd.read_csv("resultados.csv")
-#     return tabela
-
-# with st.container():
-#     st.write("---")
-#     qtde_dias = st.selectbox("Selecione o período", ["7D", "15D", "21D", "30D"])
-#     num_dias = int(qtde_dias.replace("D", ""))
-#     dados = carregar_dados()
-#     dados = dados[-num_dias:]
-#     st.area_chart(dados, x="Data", y="Contratos")
-
-# dataframe treino
+# dataframe treino da base Titanic - Kaggle
 df_train = pd.read_csv('train.csv')
 
 # st.write(df_train[df_train['Age']<1])
 st.dataframe(df_train[df_train['Age'] < 1])
+
+st.text(
+    "Quando é necessário saber algo que poderia acontecer, com base no padrão dos dados conhecidos,\n"
+    "utilizamos o Machine Learning, que é exatamente prever quem sobreviveu, e melhor ainda;\n"
+    "quem sobreviveria considerando um novo perfil de passageiro"
+    )
+
+st.text(
+    "No histograma (hist), por exemplo, podemos verificar a contagem de cada situação presente na base de dados.\n"
+    "Nem todas as colunas são utilizadas no Machine Learning, e aqui estão publicadas apenas para efeito de entendimento dos dados presentes na base.\n"
+    "No primeiro hist temos a informação de que a maioria da identificação do passageiro está abaixo do número 800;\n"
+    "No segundo hist 'Survived' é visível a informação de que todas as crianças sobreviveram;\n"
+    "Terceiro hist, as crianças estavam mais presentes na classe 2 e 3 do Titanic;\n"
+    "Histograma 'Age', percebe-se mais crianças entre 7 e 9 meses de idade;\n"
+    "O hist 'SibSp' informa o número de irmãos ou conjûges, e a maioria das crianças tinha pelo menos um irmão a bordo;\n"
+    "O hist 'Parch' informa se o passageiro tinha pais ou filhos, e nesse caso a maioria estava ou com o pai ou com mãe, a bordo;\n"
+    "Na última coluna da base, 'Fare', temos a informação da tarifa paga pelo passageiro. A maioria das crianças pagou menos de $25 na passagem."
+    )
+
+st.text(
+    "Uma pessoa com outro perfil sobreviveria ao naufrágio do Titanic?\n"
+    "Neste modelo de Machine Learning, com acurácia de 87,6% de acerto é possível simular!"
+    )
