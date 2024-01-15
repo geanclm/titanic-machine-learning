@@ -2,12 +2,9 @@
 # with ChatGPT support for advanced subjects
 # status: em desenvolvimento paralelo ao Machine Learning do Jupyter Notebook
 
-pip install joblib
-
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
@@ -72,15 +69,18 @@ st.text(
     "sobreviveria ao naufrágio do Titanic?"
     )
 
-
-
-
-st.write("Digite os dados para que a Inteligência Artificial (IA) apresente a previsão")
-
+st.text(
+    "Com esse perfil, e seguno o modelo de acurácia 87,68%,\n"
+     "o passageiro SOBREVIVERIA ao naufrágio do Titanic"
+     )
 
 
 
 # texto
+# texto
+# texto
+
+st.write("Digite os dados para que a Inteligência Artificial (IA) apresente a previsão")
 
 
 # Definir as colunas
@@ -98,16 +98,3 @@ for coluna in colunas:
 
 # Criar DataFrame com os valores selecionados
 df_passageiro = pd.DataFrame([valores_colunas])
-
-# CARREGAR modelo salvo para previsão
-lerOutroModelo = 'CLASSIFICAÇÃO_Titanic_Kaggle_csv_2-2024-01-11_rfc_08768656716417911.csv.joblib'
-persistentModel = joblib.load(lerOutroModelo)
-
-# Realizar previsão
-pred_passageiro = persistentModel.predict(df_passageiro)
-
-# Exibir resultado no Streamlit
-if pred_passageiro == 0:
-    st.write("Com esse perfil, e segundo o modelo de acurácia 87,68%, o passageiro SOBREVIVERIA ao naufrágio do Titanic")
-else:
-    st.write("Passageiro NÃO sobreviveria")
