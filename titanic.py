@@ -12,7 +12,7 @@ import pandas as pd
 st.title("Titanic - Machine Learning")
 
 image_url = "rms-titanic-bill-cannon.jpg"
-st.image(image_url, caption='RMS Titanic', use_column_width=True)
+st.image(image_url, caption='RMS Titanic (abril de 1912)', use_column_width=True)
 
 st.write("Os passageiros, com menos de 1 ano de idade, SOBREVIVERAM!")
 st.text(
@@ -61,6 +61,6 @@ st.text(
     )
 
 image_url = "Designer_Microsoft.jpeg"
-st.image(image_url, caption='Imagem gerada pela IA Designer Microsoft', use_column_width=True)
+st.image(image_url, caption='Imagem ilustrativa (IA Designer Microsoft)', use_column_width=True)
 
 st.write("Digite os dados para que a Inteligência Artificial (IA) apresente a previsão")
