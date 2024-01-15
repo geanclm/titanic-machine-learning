@@ -11,12 +11,12 @@ import pandas as pd
 
 st.title("Titanic - Machine Learning")
 
-image_url = "rms-titanic-bill-cannon.jpg"  # ou caminho local se a imagem estiver no mesmo diretório
+image_url = "rms-titanic-bill-cannon.jpg"
 st.image(image_url, caption='RMS Titanic', use_column_width=True)
 
 st.write("Os passageiros, com menos de 1 ano de idade, SOBREVIVERAM!")
 st.text(
-    "Essa prática, navegar na tabel de dados, faz parte da análise exploratório\n"
+    "Essa prática, navegar na tabel de dados, faz parte da análise exploratória\n"
     "dos dados, e apresentar esse conjunto de dados, em fornmato gráfico,\n"
     "faz parte da Análise Explanatória dos Dados (AED)"
     )
@@ -55,7 +55,12 @@ st.text(
 #     )
 
 st.text(    
-    "Uma pessoa da nossa época sobreviveria ao Titanic?\n"
-    "Neste modelo de Machine Learning, com acurácia de 87,6% de acerto\n"
+    "Uma pessoa de nossa época sobreviveria ao Titanic?\n"
+    "Neste modelo de Machine Learning, com acurácia de 87,6%\n"
     "é possível simular!"
     )
+
+image_url = "Designer_Microsoft.jpeg"
+st.image(image_url, caption='Imagem gerada pela IA Designer Microsoft', use_column_width=True)
+
+st.write("Digite os dados para que a Inteligência Artificial (IA) apresente a previsão")
