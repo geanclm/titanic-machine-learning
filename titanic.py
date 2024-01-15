@@ -26,8 +26,8 @@ df_train = pd.read_csv('train.csv')
 st.dataframe(df_train[df_train['Age'] < 1])
 
 st.text(
-    "Quando é necessário saber algo que poderia acontecer, com base no padrão dos dados\n
-    "conhecidos, utilizamos o Machine Learning, que é exatamente prever quem sobreviveu,\n
+    "Quando é necessário saber algo que poderia acontecer, com base no padrão dos dados\n"
+    "conhecidos, utilizamos o Machine Learning, que é exatamente prever quem sobreviveu,\n"
     "e melhor ainda quem sobreviveria considerando um novo perfil de passageiro"
     )
 
@@ -53,6 +53,6 @@ st.text(
 
 st.text(
     "Uma pessoa com outro perfil sobreviveria ao naufrágio do Titanic?\n"
-    "Neste modelo de Machine Learning, com acurácia de 87,6% de acerto\n
+    "Neste modelo de Machine Learning, com acurácia de 87,6% de acerto\n"
     "é possível simular!"
     )
