@@ -5,7 +5,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+# import joblib
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
