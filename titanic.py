@@ -15,12 +15,12 @@ image_url = "rms-titanic-bill-cannon.jpg"  # ou caminho local se a imagem estive
 st.image(image_url, caption='RMS Titanic', use_column_width=True)
 
 st.write("Os passageiros, com menos de 1 ano de idade, SOBREVIVERAM!")
-
 st.text(
-    "Essa prática, navegar na tabel de dados, faz parte da análise exploratório dos dados,\n"
-    "e apresentar esse conjunto de dados, em fornmato gráfico, faz parte da\n"
-    "Análise Explanatória dos Dados (AED)"
+    "Essa prática, navegar na tabel de dados, faz parte da análise exploratório\n"
+    "dos dados, e apresentar esse conjunto de dados, em fornmato gráfico,\n"
+    "faz parte da Análise Explanatória dos Dados (AED)"
     )
+st.write("Na sequência é possível conferir a tabela dos passageiros")
 
 # dataframe treino da base Titanic - Kaggle
 df_train = pd.read_csv('train.csv')
@@ -31,7 +31,7 @@ st.dataframe(df_train[df_train['Age'] < 1])
 st.text(
     "Quando é necessário saber algo que poderia acontecer, com base no padrão dos\n"
     "dados conhecidos, utilizamos o Machine Learning, que é exatamente, neste caso,\n"
-    "prever quem sobreviveu, um desafio proposto pelo site Kaggle"
+    "prever quem sobreviveu ao naufrágio, desafio proposto pelo site Kaggle."
     )
 
 # # Criar histograma
@@ -54,8 +54,8 @@ st.text(
 #     "Na última coluna da base, 'Fare', temos a informação da tarifa paga pelo passageiro. A maioria das crianças pagou menos de $25 na passagem."
 #     )
 
-st.text(
-    "Uma pessoa com outro perfil sobreviveria ao naufrágio do Titanic?\n"
+st.text(    
+    "Uma pessoa da nossa época sobreviveria ao Titanic?\n"
     "Neste modelo de Machine Learning, com acurácia de 87,6% de acerto\n"
     "é possível simular!"
     )
