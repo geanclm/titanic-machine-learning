@@ -15,8 +15,12 @@ image_url = "rms-titanic-bill-cannon.jpg"  # ou caminho local se a imagem estive
 st.image(image_url, caption='RMS Titanic', use_column_width=True)
 
 st.write("Os passageiros, com menos de 1 ano de idade, SOBREVIVERAM!")
-st.write("Essa prática, navegar na tabel de dados, faz parte da análise exploratório dos dados")
-st.write("Apresentar esse data framne, em fornmato gráfico, faz parte da Análise Explanatória dos Dados (AED)")
+
+st.text(
+    "Essa prática, navegar na tabel de dados, faz parte da análise exploratório dos dados,\n"
+    "e apresentar esse conjunto de dados, em fornmato gráfico, faz parte da\n"
+    "Análise Explanatória dos Dados (AED)"
+    )
 
 # dataframe treino da base Titanic - Kaggle
 df_train = pd.read_csv('train.csv')
@@ -25,9 +29,9 @@ df_train = pd.read_csv('train.csv')
 st.dataframe(df_train[df_train['Age'] < 1])
 
 st.text(
-    "Quando é necessário saber algo que poderia acontecer, com base no padrão dos dados\n"
-    "conhecidos, utilizamos o Machine Learning, que é exatamente prever quem sobreviveu,\n"
-    "e melhor ainda quem sobreviveria considerando um novo perfil de passageiro"
+    "Quando é necessário saber algo que poderia acontecer, com base no padrão dos\n"
+    "dados conhecidos, utilizamos o Machine Learning, que é exatamente, neste caso,\n"
+    "prever quem sobreviveu, um desafio proposto pelo site Kaggle"
     )
 
 # # Criar histograma
@@ -38,17 +42,17 @@ st.text(
 # # Exibir no Streamlit
 # st.pyplot(fig)
 
-st.text(
-    "No histograma (hist), por exemplo, podemos verificar a contagem de cada situação presente na base de dados.\n"
-    "Nem todas as colunas são utilizadas no Machine Learning, e aqui estão publicadas apenas para efeito de entendimento dos dados presentes na base.\n"
-    "No primeiro hist temos a informação de que a maioria da identificação do passageiro está abaixo do número 800;\n"
-    "No segundo hist 'Survived' é visível a informação de que todas as crianças sobreviveram;\n"
-    "Terceiro hist, as crianças estavam mais presentes na classe 2 e 3 do Titanic;\n"
-    "Histograma 'Age', percebe-se mais crianças entre 7 e 9 meses de idade;\n"
-    "O hist 'SibSp' informa o número de irmãos ou conjûges, e a maioria das crianças tinha pelo menos um irmão a bordo;\n"
-    "O hist 'Parch' informa se o passageiro tinha pais ou filhos, e nesse caso a maioria estava ou com o pai ou com mãe, a bordo;\n"
-    "Na última coluna da base, 'Fare', temos a informação da tarifa paga pelo passageiro. A maioria das crianças pagou menos de $25 na passagem."
-    )
+# st.text(
+#     "No histograma (hist), por exemplo, podemos verificar a contagem de cada situação presente na base de dados.\n"
+#     "Nem todas as colunas são utilizadas no Machine Learning, e aqui estão publicadas apenas para efeito de entendimento dos dados presentes na base.\n"
+#     "No primeiro hist temos a informação de que a maioria da identificação do passageiro está abaixo do número 800;\n"
+#     "No segundo hist 'Survived' é visível a informação de que todas as crianças sobreviveram;\n"
+#     "Terceiro hist, as crianças estavam mais presentes na classe 2 e 3 do Titanic;\n"
+#     "Histograma 'Age', percebe-se mais crianças entre 7 e 9 meses de idade;\n"
+#     "O hist 'SibSp' informa o número de irmãos ou conjûges, e a maioria das crianças tinha pelo menos um irmão a bordo;\n"
+#     "O hist 'Parch' informa se o passageiro tinha pais ou filhos, e nesse caso a maioria estava ou com o pai ou com mãe, a bordo;\n"
+#     "Na última coluna da base, 'Fare', temos a informação da tarifa paga pelo passageiro. A maioria das crianças pagou menos de $25 na passagem."
+#     )
 
 st.text(
     "Uma pessoa com outro perfil sobreviveria ao naufrágio do Titanic?\n"
