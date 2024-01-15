@@ -66,11 +66,11 @@ st.image(image_url, caption='Imagem ilustrativa (IA Designer Microsoft)', use_co
 
 st.title("Previsão de Sobrevivência")
 st.text( 
-    "Um homem que embarcou em Southampton (Inglaterra)\n"
-    "na classe 2, com 35 anos de idade, sem parentes e com uma tarifa paga de $35,\n"
-    "sobreviveria ao naufrágio do Titanic?"
+    "Um homem que embarcou em Southampton (Inglaterra) na classe 2,\n"
+    "com 35 anos de idade, sem parentes e com uma tarifa paga\n"
+    "de 35 dólares, sobreviveria ao naufrágio do Titanic?"
     )
 st.text(
-    "Com esse perfil, seguno o modelo de Machine Learnming com acurácia 87,68%,\n"
+    "Com esse perfil, seguno o modelo de Machine Learnming, de acurácia 87,68%,\n"
      "o passageiro SOBREVIVERIA ao naufrágio do Titanic"
      )
