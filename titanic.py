@@ -4,6 +4,8 @@
 
 import streamlit as st
 import pandas as pd
+import numpy as np
+import joblib
 
 # st.set_page_config(page_title="Predição de sobreviventes do Titanic")
 # with st.container():
@@ -56,11 +58,54 @@ st.text(
 
 st.text(    
     "Uma pessoa de nossa época sobreviveria ao Titanic?\n"
-    "Neste modelo de Machine Learning, com acurácia de 87,6%\n"
-    "é possível simular!"
+    "Neste modelo de Machine Learning, com acurácia de 87,68% é possível simular!"
     )
 
 image_url = "Designer_Microsoft.jpeg"
 st.image(image_url, caption='Imagem ilustrativa (IA Designer Microsoft)', use_column_width=True)
 
+st.text( 
+    "Um homem que embarcou em Southampton (Inglaterra)/n"
+    "na classe 2, com 35 anos de idade, sem parentes e com uma tarifa paga de $35,/n"
+    "sobreviveria ao naufrágio do Titanic?"
+    )
+
+
+
+
 st.write("Digite os dados para que a Inteligência Artificial (IA) apresente a previsão")
+
+
+
+
+# texto
+
+
+# Definir as colunas
+colunas = ['Age', 'Fare', 'Sex_bin', 'Cabin_bin', 'Embarked_Q', 'Embarked_S',
+           'Title_Miss', 'Title_Mr', 'Title_Mrs', 'Title_Person', 'Pclass_2',
+           'Pclass_3', 'familySize_c_Pequena', 'familySize_c_Sozinho']
+
+# Criar interface do Streamlit
+st.title("Previsão de Sobrevivência no Titanic")
+
+# Criar sliders para cada coluna
+valores_colunas = {}
+for coluna in colunas:
+    valores_colunas[coluna] = st.slider(f'Selecione o valor para {coluna}', min_value=0, max_value=1, step=1)
+
+# Criar DataFrame com os valores selecionados
+df_passageiro = pd.DataFrame([valores_colunas])
+
+# CARREGAR modelo salvo para previsão
+lerOutroModelo = 'CLASSIFICAÇÃO_Titanic_Kaggle_csv_2-2024-01-11_rfc_08768656716417911.csv.joblib'
+persistentModel = joblib.load(lerOutroModelo)
+
+# Realizar previsão
+pred_passageiro = persistentModel.predict(df_passageiro)
+
+# Exibir resultado no Streamlit
+if pred_passageiro == 0:
+    st.write("Com esse perfil, e segundo o modelo de acurácia 87,68%, o passageiro SOBREVIVERIA ao naufrágio do Titanic")
+else:
+    st.write("Passageiro NÃO sobreviveria")
