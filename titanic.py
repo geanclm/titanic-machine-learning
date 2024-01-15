@@ -63,38 +63,14 @@ st.text(
 image_url = "Designer_Microsoft.jpeg"
 st.image(image_url, caption='Imagem ilustrativa (IA Designer Microsoft)', use_column_width=True)
 
+
+st.title("Previsão de Sobrevivência")
 st.text( 
-    "Um homem que embarcou em Southampton (Inglaterra)/n"
-    "na classe 2, com 35 anos de idade, sem parentes e com uma tarifa paga de $35,/n"
+    "Um homem que embarcou em Southampton (Inglaterra)\n"
+    "na classe 2, com 35 anos de idade, sem parentes e com uma tarifa paga de $35,\n"
     "sobreviveria ao naufrágio do Titanic?"
     )
-
 st.text(
-    "Com esse perfil, e seguno o modelo de acurácia 87,68%,\n"
+    "Com esse perfil, seguno o modelo de Machine Learnming com acurácia 87,68%,\n"
      "o passageiro SOBREVIVERIA ao naufrágio do Titanic"
      )
-
-
-
-# texto
-# texto
-# texto
-
-st.write("Digite os dados para que a Inteligência Artificial (IA) apresente a previsão")
-
-
-# Definir as colunas
-colunas = ['Age', 'Fare', 'Sex_bin', 'Cabin_bin', 'Embarked_Q', 'Embarked_S',
-           'Title_Miss', 'Title_Mr', 'Title_Mrs', 'Title_Person', 'Pclass_2',
-           'Pclass_3', 'familySize_c_Pequena', 'familySize_c_Sozinho']
-
-# Criar interface do Streamlit
-st.title("Previsão de Sobrevivência no Titanic")
-
-# Criar sliders para cada coluna
-valores_colunas = {}
-for coluna in colunas:
-    valores_colunas[coluna] = st.slider(f'Selecione o valor para {coluna}', min_value=0, max_value=1, step=1)
-
-# Criar DataFrame com os valores selecionados
-df_passageiro = pd.DataFrame([valores_colunas])
