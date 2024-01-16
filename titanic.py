@@ -234,10 +234,4 @@ st.write(
         "Este é o Mundo Novo onde a Inteligeência Artificial (IA)\n"
         "trabalha junto ao homem na busca por insights cada vez melhores,\n"
         "com o intuito de transformar a rotina de vida das pessoas\n"         
-        )    
-
-
-st.text(    
-    "Logo abaixo é possível simular um dierente perfil de passageiro,\n"
-    "e em seguida o modelo de Machine Learning informará a previsão"      
-    )
+        )
