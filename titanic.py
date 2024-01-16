@@ -11,9 +11,9 @@
 # 1 - python -m venv nomePastaProjeto
 # 2 - definir a diretiva de execução para o computador local através do PowerShell:
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
-# 3 - .\Scripts\activate                                                                  # para ativar o env
-# 4 - .\Scripts\deactivate
-# 5 - pip list                                                                            # para listar as dependências do env
+# 3 - .\Scripts\activate                                                                  # ativar o env
+# 4 - .\Scripts\deactivate                                                                # desativar o env   
+# 5 - pip list                                                                            # listar as dependências do env
 # - - -
 
 import streamlit as st
