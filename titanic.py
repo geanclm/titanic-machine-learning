@@ -231,3 +231,5 @@ st.write(
         "trabalha junto ao homem na busca por insights cada vez melhores,\n"
         "com o intuito de transformar a rotina de vida das pessoas\n"         
         )
+
+st.markdown("[LinkedIn](https://www.linkedin.com/in/geanclm/)")
