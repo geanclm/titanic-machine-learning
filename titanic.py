@@ -2,6 +2,7 @@
 # with ChatGPT support for advanced subjects
 # status: em desenvolvimento paralelo ao Machine Learning do Jupyter Notebook
 # - - -
+# para instalar todas as dependências usadas no projeto
 # pip install -r requirements.txt
 
 # - - -
